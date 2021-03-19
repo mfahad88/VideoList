@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingBottom="30dp"
+    android:orientation="horizontal">
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       app:cardElevation="5dp"
+       app:cardCornerRadius="4dp">
+
+       <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="visible"
+           android:scaleType="fitXY"
+           tools:src="@drawable/free_video" />
+
+
+
+       <com.google.android.exoplayer2.ui.PlayerView
+           android:id="@+id/videoPlayer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           app:repeat_toggle_modes="none"
+           app:show_timeout="45000"
+           app:surface_type="texture_view"
+           />
+
+   </androidx.cardview.widget.CardView>
+</LinearLayout>
